@@ -1,5 +1,5 @@
 const Instructions = () => (
-  <div className="App">
+  <div className='App'>
     <h1>Slot Machine</h1>
     <h2>Goals</h2>
     <ul>
@@ -9,8 +9,7 @@ const Instructions = () => (
       </li>
       <li>render a button which, when clicked, begins spinning the wheels</li>
       <li>
-        call the <tt>spinWheel</tt> API function to fetch spin results for each
-        wheel
+        call the spinWheel API function to fetch spin results for each wheel
       </li>
       <li>
         if the results for all three wheels are the same, display a message to
