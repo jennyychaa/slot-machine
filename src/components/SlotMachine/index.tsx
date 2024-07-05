@@ -18,7 +18,8 @@ function SlotMachine() {
     // Call the spinWheel API function to fetch the results for each slot.
     Promise.all([spinWheel(), spinWheel(), spinWheel()])
       // Display the complete slot machine results to users only after all requests are finished.
-      // This approach prevents confusion by avoiding partial results during the spin.
+      // This approach prevents slots results from being displayed out of order in case requests are fulfilled at different times,
+      // and avoids user confusion by preventing partial results during the spin if one or more requests fail.
       .then((results) => {
         for (let i = 0; i < results.length; i++) {
           // Add delays to each slot so that the first slot's result displays first,
