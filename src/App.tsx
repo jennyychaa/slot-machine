@@ -1,15 +1,14 @@
-import './styles.css';
-
-import { spinWheel } from './api';
-
-import Instructions from './Instructions';
-import busySpinner from './busy.gif';
+import './themes/reset.css';
+import './themes/styles.css';
+import SlotMachine from './components/SlotMachine';
 
 export default function App() {
   return (
-    <>
-      <Instructions />
-      <main>{/* code goes here :) */}</main>
-    </>
+    <div className='layout'>
+      <div className='container'>
+        <h1>Lucky Quacks & Chimes 🍒</h1>
+        <SlotMachine />
+      </div>
+    </div>
   );
 }

@@ -2,9 +2,9 @@
  * pretend this file describes a remote API.  you should not need to edit anything here.
  ***************************************************************************************/
 
-import bell from "../server/bell.png";
-import cherries from "../server/cherries.png";
-import duck from "../server/duck.png";
+import bell from '../assets/bell.png';
+import cherries from '../assets/cherries.png';
+import duck from '../assets/duck.png';
 
 /**
  * @description spins one wheel in a slot machine.  returns an object containing a url to an image and an internal ID of that image
@@ -19,7 +19,7 @@ async function spinWheel() {
 
   return {
     id,
-    url
+    url,
   };
 }
 

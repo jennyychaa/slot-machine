@@ -1,0 +1,138 @@
+.layout {
+  background-color: #000000;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 675px;
+  margin: 0 auto;
+  padding: 64px 16px;
+}
+
+h1 {
+  margin-bottom: 4px;
+  font-family: 'Playwrite ES Deco', cursive;
+  font-size: 28px;
+  text-align: center;
+}
+
+@media (min-width: 675px) {
+  h1 {
+    font-size: 38px;
+  }
+}
+
+.slot-machine__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.slot-machine__button {
+  border: 0;
+  border-radius: 8px;
+  background-color: #967006;
+  padding: 0;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.slot-machine__label {
+  display: block;
+  padding: 16px 48px;
+  border-radius: 8px;
+  background-color: #ffc200;
+  transform: translateY(-6px);
+}
+
+.slot-machine__button:hover .slot-machine__label,
+.slot-machine__button:focus .slot-machine__label,
+.slot-machine__button:active .slot-machine__label {
+  transform: translateY(-2px);
+}
+
+.slot-machine__button:disabled {
+  background-color: #969494;
+  cursor: default;
+}
+
+.slot-machine__button:disabled .slot-machine__label {
+  background-color: #cccccc;
+  transform: translateY(-6px);
+}
+
+.slot-machine__message {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+  font-family: 'Playwrite ES Deco', cursive;
+  font-size: 24px;
+}
+
+@media (min-width: 675px) {
+  .slot-machine__message {
+    font-size: 32px;
+  }
+}
+
+.slots {
+  --angle: 0deg;
+  display: flex;
+  justify-content: space-evenly;
+  grid-gap: 16px;
+  padding: 64px 16px;
+  border: 10px solid;
+  border-image: conic-gradient(
+      from var(--angle),
+      red,
+      yellow,
+      lime,
+      aqua,
+      blue,
+      magenta,
+      red
+    )
+    1;
+}
+
+.slots--spinning {
+  animation: 0.25s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.slot {
+  width: 100px;
+  height: 100px;
+  background: #ffffff;
+  padding: 16px 0px;
+  border: 10px solid #ffe100;
+}
+
+@media (min-width: 675px) {
+  .slot {
+    width: 150px;
+    height: 150px;
+    padding: 32px 8px;
+  }
+}
+
+.slot img {
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.1s ease-in-out;
+}
