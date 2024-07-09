@@ -19,7 +19,7 @@ Before starting, install [Node.js](https://nodejs.org/) on your development mach
 $  npm install
 
 # Run the app on your local environment
-$  npm run dev
+$  npm start
 ```
 
 2. Navigate to [http://localhost:3000](http://localhost:3000) in your browser to view the Slot Machine app.
